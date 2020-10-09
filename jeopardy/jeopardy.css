@@ -1,0 +1,28 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+
+body {
+  background-color: #115ff4;
+  color: white;
+  font-weight: bold;
+}
+
+#column-top {
+  background-color: #8d2ab5;
+}
+
+.data {
+  color: white;
+}
+
+table {
+  table-layout: fixed;
+}
+.answer {
+  background-color: #28a200;
+}
