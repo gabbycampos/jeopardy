@@ -108,21 +108,21 @@ function handleClick(evt) {
   let x = evt.target.id;
   //console.log(x)
   let [catId, clueId] = x.split('-')
-  let clue = categories[catId].dataCat[clueId];
+  let data = categories[catId].dataCat[clueId];
   let display;
 
-  if (!clue.showing) {
+  if (!data.showing) {
     $(`#${x}`).removeClass('cell');
     $(`#${x}`).addClass('clue');
-    display = clue.question;
-    clue.showing = 'question';
+    display = data.question;
+    data.showing = 'question';
   }
-  else if (clue.showing === 'question') {
+  else if (data.showing === 'question') {
     $(`#${x}`).removeClass('clue');
     $(`#${x}`).removeClass('cell');
     $(`#${x}`).addClass('answer');
-    display = clue.answer;
-    clue.showing = 'answer'
+    display = data.answer;
+    data.showing = 'answer'
   } else {
     // ignore click
     return;
