@@ -90,7 +90,7 @@ async function fillTable() {
   for (let i = 0; i < NUM_CLUES; i++) {
     const $row = $('<tr class="data"></tr>');
     for (let j = 0; j < NUM_CATEGORIES; j++) {
-      $row.append($("<td>").attr("id", `${i}-${j}`).text("?").addClass("cell block"));
+      $row.append($("<td>").attr("id", `${i}-${j}`).text("?").addClass("cell"));
     }
     $table.append($row);
   }
@@ -112,7 +112,7 @@ function handleClick(evt) {
   let display;
 
   if (!clue.showing) {
-    $(`#${x}`).removeClass('block');
+    $(`#${x}`).removeClass('cell');
     $(`#${x}`).addClass('clue');
     display = clue.question;
     clue.showing = 'question';
