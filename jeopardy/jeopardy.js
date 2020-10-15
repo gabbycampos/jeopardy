@@ -107,7 +107,7 @@ async function fillTable() {
 function handleClick(evt) {
   let x = evt.target.id;
   //console.log(x)
-  let [catId, clueId] = x.split('-')
+  let [clueId, catId] = x.split('-')
   let data = categories[catId].dataCat[clueId];
   let display;
 
